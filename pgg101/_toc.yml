@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: 00_intro
+chapters:
+- file: 01_startingoff
+- file: 02_whypython
+- file: 03_gettingstarted
+- file: 04_firstprogram
+- file: 05_variables
+- file: 06_datatypes 
+- file: 07_functions
+- file: 08_flowcontrol
+- file: 09_loops
