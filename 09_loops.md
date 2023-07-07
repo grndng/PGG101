@@ -87,7 +87,7 @@ The `range()`-function *returns* a range object. A range object is a data type i
 
 ```python
 print(type(range(0,10,2)))
->>> <class 'range'>
+# >>> <class 'range'>
 ```
 
 As you can see the type of the expression `range(0,10,2)` is `range`. Generally speaking this is as much as you need to know about the `range()`-function *for now*! Let's jump over to `for` loops.
