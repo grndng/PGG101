@@ -1,15 +1,14 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
-root: 00_intro
+root: index
 chapters:
-- file: 01_startingoff
-- file: 02_whypython
-- file: 03_gettingstarted
-- file: 04_firstprogram
-- file: 05_variables
-- file: 06_datatypes 
-- file: 07_functions
-- file: 08_flowcontrol
-- file: 09_loops
+- file: 00_intro
+- file: 01_fundamentals
+- file: 02_startingoff
+- file: 03_whypython
+- file: 04_gettingstarted
+- file: 05_firstprogram
+- file: 06_variables
+- file: 07_datatypes 
+- file: 08_functions
+- file: 09_flowcontrol
+- file: 10_loops

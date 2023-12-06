@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables and operators 🗃️ &#8212; PGG101</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Types in Python 📊" href="07_datatypes.html" />
+    <link rel="prev" title="Our first Python program 🥇" href="05_firstprogram.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PGG101</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Software Technology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
+   Starting Off 🌟
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_whypython.html">
+   Why Python? 🐍
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_gettingstarted.html">
+   Getting started: Python! ⏯️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_firstprogram.html">
+   Our first Python program 🥇
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Variables and operators 🗃️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_datatypes.html">
+   Data Types in Python 📊
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_functions.html">
+   Functions ☄️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_flowcontrol.html">
+   Flow control ⬇️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/06_variables.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables 🅰
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators ↔
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-operators">
+     Arithmetic operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-operators">
+     Comparison operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-and-membership-operators">
+     Logical and membership operators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Variables and operators 🗃️</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables 🅰
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators ↔
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-operators">
+     Arithmetic operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-operators">
+     Comparison operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-and-membership-operators">
+     Logical and membership operators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="variables-and-operators">
+<h1>Variables and operators 🗃️<a class="headerlink" href="#variables-and-operators" title="Permalink to this headline">#</a></h1>
+<p>As you can guess from the title of this chapter we will learn more about variables and operators in Python. We already talked about variables and what you should keep in mind about variables is that they are comparable to a container or box where we can store values so our program can work with it.</p>
+<div class="section" id="variables">
+<h2>Variables 🅰<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>When naming variables there are some things to keep in mind. Variable names have to start with an underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> or a letter and can be as long as you wish. So a variable name could be <code class="docutils literal notranslate"><span class="pre">_42</span></code> but not <code class="docutils literal notranslate"><span class="pre">42</span></code> since <code class="docutils literal notranslate"><span class="pre">42</span></code> doesn’t start with an underscore or a letter. For the students having keyboards set to a language that is not English: we recommend you not to use special characters like <code class="docutils literal notranslate"><span class="pre">ü</span></code>, <code class="docutils literal notranslate"><span class="pre">ä</span></code>, <code class="docutils literal notranslate"><span class="pre">à</span></code> and so on in your variable names. Also in Python there are <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">keywords</a> that are <em>reserved</em> for Python-internal functions. Those can’t be used as variables and shouldn’t be used as e.g. file names when saving your Python files:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>      <span class="k">await</span>      <span class="k">else</span>       <span class="kn">import</span>     <span class="nn">pass</span>
+<span class="kc">None</span>       <span class="k">break</span>      <span class="k">except</span>     <span class="ow">in</span>         <span class="k">raise</span>
+<span class="kc">True</span>       <span class="k">class</span>      <span class="nc">finally</span>    <span class="ow">is</span>         <span class="k">return</span>
+<span class="ow">and</span>        <span class="k">continue</span>   <span class="k">for</span>        <span class="k">lambda</span>     <span class="k">try</span>
+<span class="k">as</span>         <span class="k">def</span>        <span class="nf">from</span>       <span class="k">nonlocal</span>   <span class="k">while</span>
+<span class="k">assert</span>     <span class="k">del</span>        <span class="k">global</span>     <span class="ow">not</span>        <span class="k">with</span>
+<span class="k">async</span>      <span class="k">elif</span>       <span class="k">if</span>         <span class="ow">or</span>         <span class="k">yield</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Try to keep variable names descriptive for example <code class="docutils literal notranslate"><span class="pre">list_of_measurements</span></code> for, you’ve guessed it, a list of measurements. The Python Style Guide (<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>) recommends using a notation called <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> which divides words in variables by <code class="docutils literal notranslate"><span class="pre">_</span></code>. Another way to write variable names would be <code class="docutils literal notranslate"><span class="pre">camelCase</span></code> or <code class="docutils literal notranslate"><span class="pre">MixedCase</span></code> where you write the first letter of each word in upper-case letters. Generally speaking: whichever you use, stick to it within your Python file.</p>
+</div>
+<div class="section" id="operators">
+<h2>Operators ↔<a class="headerlink" href="#operators" title="Permalink to this headline">#</a></h2>
+<div class="section" id="arithmetic-operators">
+<h3>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">#</a></h3>
+<p>We already have used some operators in our first assignment. We will start with the more intuitive operators: arithmetic operators.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Addition</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4+5</span> <span class="pre">=</span> <span class="pre">9</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Subtraction</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4-5</span> <span class="pre">=</span> <span class="pre">-1</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4*5</span> <span class="pre">=</span> <span class="pre">20</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Division</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4/5</span> <span class="pre">=</span> <span class="pre">0.8</span> </code></p></td>
+</tr>
+<tr class="row-even"><td><p>%</p></td>
+<td><p>Modulus</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4%5</span> <span class="pre">=</span> <span class="pre">4</span> </code></p></td>
+</tr>
+<tr class="row-odd"><td><p>**</p></td>
+<td><p>Exponentiation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4**5</span> <span class="pre">=</span> <span class="pre">1024</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>//</p></td>
+<td><p>Floor division</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4//5</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Most of those are pretty obvious. You can imagine modulus as the simple remainder of the division of two numbers. <code class="docutils literal notranslate"><span class="pre">23/5</span></code> results in the 5 “fitting” four times inside the 20 and <code class="docutils literal notranslate"><span class="pre">3</span></code>remains which means <code class="docutils literal notranslate"><span class="pre">23</span> <span class="pre">%</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">3</span></code>. With floor division it’s the opposite: you don’t try to figure out what remains after you have divided a number by another number but how many times one number can fit into another number. That means that <code class="docutils literal notranslate"><span class="pre">23</span> <span class="pre">//</span> <span class="pre">5</span></code> would result in 4 since 5 “fits” 4 times in 23.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="comparison-operators">
+<h3>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">#</a></h3>
+<p>Next we will talk about comparison operators. We already know the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>. At first it might feel misleading because we know the assignment operator from mathematics as the operator that shows that something is equal to one another. In Python we use <code class="docutils literal notranslate"><span class="pre">==</span></code> to check for equality. Other comparison operators are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>Equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>Not equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">!=</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>Greater than</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;</p></td>
+<td><p>Less than</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&lt;</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;=</p></td>
+<td><p>Greater than or equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&gt;=</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>Less than or equal</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">&lt;=</span> <span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">True</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Other than the notation in Python the comparison operators should be rather intuitive.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="logical-and-membership-operators">
+<h3>Logical and membership operators<a class="headerlink" href="#logical-and-membership-operators" title="Permalink to this headline">#</a></h3>
+<p>Let us take a look at logical and membership operators. Those are pretty self explanatory and are heavily utilized in programming languages to combine statements. The following examples all evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>and</p></td>
+<td><p>Returns True if both statements are true</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&gt;</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>or</p></td>
+<td><p>Returns True if one of the statements is true</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>not</p></td>
+<td><p>Reverses the result (returns False if result is true)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not(5</span> <span class="pre">==</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>in</p></td>
+<td><p>Returns True if one value is an element of a sequence</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'5'</span> <span class="pre">in</span> <span class="pre">'555'</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>We already have learned how to compute in Python. In the next exercise we’ll take another look at some problems where you will have to think more about how to use operators and parenthesis. You can find the tasks in the following PDF file:</p>
+<div class="warning admonition">
+<p class="admonition-title">Second Python Task:</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/3RbKAH6zBwgA5Dx">Operators in Python</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="05_firstprogram.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Our first Python program 🥇</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="07_datatypes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Types in Python 📊</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Güren Tan Dinga, Kay Zobel<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

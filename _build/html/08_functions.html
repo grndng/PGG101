@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions ☄️ &#8212; PGG101</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Flow control ⬇️" href="09_flowcontrol.html" />
+    <link rel="prev" title="Data Types in Python 📊" href="07_datatypes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PGG101</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Software Technology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
+   Starting Off 🌟
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_whypython.html">
+   Why Python? 🐍
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_gettingstarted.html">
+   Getting started: Python! ⏯️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_firstprogram.html">
+   Our first Python program 🥇
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_variables.html">
+   Variables and operators 🗃️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_datatypes.html">
+   Data Types in Python 📊
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions ☄️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_flowcontrol.html">
+   Flow control ⬇️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/08_functions.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-function">
+   Our first function 💥
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#print-and-return-in-functions">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     print
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     return
+    </span>
+   </code>
+   in functions 🖨
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Functions ☄️</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-function">
+   Our first function 💥
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#print-and-return-in-functions">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     print
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     return
+    </span>
+   </code>
+   in functions 🖨
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="functions">
+<h1>Functions ☄️<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
+<p>Functions will enable us to leverage the benefits of programming and for the first time, we will have a real sense of automation when using functions. When we were writing down formulas for different mathematical problems, we wrote them down in a manner comparable to what we do in mathematics. We had some kind of boilerplate or template formula (e.g. <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">pi</span> <span class="pre">*</span> <span class="pre">r</span></code> ) and we used variables (in this case <code class="docutils literal notranslate"><span class="pre">r</span></code>) to compute the result of a circumference of a circle:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">circle_circumference</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>That means that if we want to compute the circumference of the circle with a higher accuracy by using more decimal places, we would have to switch <code class="docutils literal notranslate"><span class="pre">pi</span></code> to <code class="docutils literal notranslate"><span class="pre">3.14159</span></code> by hand. If we want to compare the results, our code will bloat up by doing the same thing over and over again:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">circle_circumference_01</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">rr</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+<span class="n">circle_circumference_02</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference_01</span><span class="p">,</span> <span class="n">circle_circumference_02</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="our-first-function">
+<h2>Our first function 💥<a class="headerlink" href="#our-first-function" title="Permalink to this headline">#</a></h2>
+<p>After talking about automating things and outsourcing the tedious work to computers this seems like a major step back. This is where functions come into play. With functions in Python we can go ahead and set our “template”, in this case <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">pi</span> <span class="pre">*</span> <span class="pre">r</span></code>, into a function we can use over and over again:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle_circumference</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span>
+</pre></div>
+</div>
+<p>This might look slightly cryptic and complicated at first but we will go through it step by step. So the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> tells Python that we are going to create a function. Python expects a function name in that case which is <code class="docutils literal notranslate"><span class="pre">circle_circumference</span></code>. Then we can, in parenthesis, set parameters to pass data inside our function. In our case we want to be able to enter the value for <code class="docutils literal notranslate"><span class="pre">pi</span></code> and the <code class="docutils literal notranslate"><span class="pre">r</span></code>adius for the circumference computation. So this is, and this is <u>important</u> to remember(!!!), how you <strong>create</strong> a function. Creating a function doesn’t mean we use the function in any way, we just create it. Just as you would write down the formula in mathematics, nothing is being calculated yet. To really do something with our function, we have to <strong>call</strong> it. This is very important and a common mistake. To call the function, you use the function name followed by the arguments (in our case <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">r</span></code>) in parenthesis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># CREATING the function</span>
+<span class="k">def</span> <span class="nf">circle_circumference</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span>
+
+<span class="c1"># CALLING the function</span>
+<span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># this will not print out anything</span>
+
+<span class="c1">#PRINTING the function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># this will print out the result</span>
+</pre></div>
+</div>
+<p>This will print out <code class="docutils literal notranslate"><span class="pre">18.84</span></code> which is the result of <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3.14</span> <span class="pre">*</span> <span class="pre">3</span></code>. So if we want to calculate the circumference of a circle with different values, we can just use our newly created function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># CREATING the function</span>
+<span class="k">def</span> <span class="nf">circle_circumference</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span>
+
+<span class="c1"># CALLING and PRINTING the function</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">circle_circumference</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This begs the question: why not go ahead and use the formula in every line instead of calling the function every time? One reason is readability. When you call your function at a later point in your code, you’ll be grateful that you know what you’re doing by looking at the function name. Another reason is that if you want to change something within your calculation, you have to change it once and it’ll be valid for every time you call your function. Let’s look at the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">squaring_things</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We notice that we made a mistake. We didn’t want to calculate <code class="docutils literal notranslate"><span class="pre">x**y</span></code> but <code class="docutils literal notranslate"><span class="pre">x**2</span> <span class="pre">+</span> <span class="pre">y**2</span></code>. If you call the function ten times within your code, you need to change <code class="docutils literal notranslate"><span class="pre">x**y</span></code> into <code class="docutils literal notranslate"><span class="pre">x**2</span> <span class="pre">+</span> <span class="pre">y**2</span></code> ten times. When using functions you can simply alter the formula where you have created the function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">squaring_things</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">squaring_things</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Also copy-pasting simple formulas works but what if your function looks like this?:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taken from https://github.com/scikit-image/scikit-image/blob/main/skimage/util/dtype.py#L544-L565</span>
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">force_copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">uniform</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;The use of this function is discouraged as its behavior may change </span>
+    <span class="n">dramatically</span> <span class="ow">in</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="mf">1.0</span><span class="o">.</span> <span class="n">This</span> <span class="n">function</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span>
+    <span class="ow">in</span> <span class="n">scikit</span><span class="o">-</span><span class="n">image</span> <span class="mf">1.0</span><span class="o">.</span><span class="s2">&quot;, FutureWarning, stacklevel=2)    </span>
+    
+    <span class="k">return</span> <span class="n">_convert</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>                    
+    <span class="n">force_copy</span><span class="o">=</span><span class="n">force_copy</span><span class="p">,</span> <span class="n">uniform</span><span class="o">=</span><span class="n">uniform</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You don’t need to understand what’s going on in the function (but you still see the pattern: <code class="docutils literal notranslate"><span class="pre">def</span></code>, the <code class="docutils literal notranslate"><span class="pre">function_name</span></code> and <code class="docutils literal notranslate"><span class="pre">(parameters)</span></code>). It’s self explanatory that it wouldn’t make sense to copy-paste that code block over and over again. The more complicated and extensive your program gets, the happier you will be about functions - no doubt!</p>
+</div>
+<div class="section" id="print-and-return-in-functions">
+<h2><code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">return</span></code> in functions 🖨<a class="headerlink" href="#print-and-return-in-functions" title="Permalink to this headline">#</a></h2>
+<p>As you might have noticed we don’t use print-statements in our functions. Instead we use <code class="docutils literal notranslate"><span class="pre">return</span></code>. If you have a function that doesn’t return anything within the function, it will return <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>    
+    <span class="k">return</span>	<span class="c1"># this will return None</span>
+</pre></div>
+</div>
+<p>Also it is important to know that if you use a return statement and Python reaches the return statement, the function call will be left:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>    
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;funny function&quot;</span>    
+    <span class="k">return</span> <span class="n">x</span>	
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;this is fun&quot;</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">my_func</span><span class="p">)</span>
+<span class="s2">&quot;funny function&quot;</span>
+</pre></div>
+</div>
+<p>On a side note: you can’t leave functions empty. If you want to define a function for later use, you can use the <code class="docutils literal notranslate"><span class="pre">pass</span></code>-keyword:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_func</span><span class="p">():</span>    
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>We will take a deeper look at return statements during the lectures, too. However, for now you can remember that when working with return statements, we can <em>reuse</em> the results of our functions which will be important later on!:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># 4 * (2**2) = 4 * 4 = 1616</span>
+</pre></div>
+</div>
+<p>This would <em>not</em> work if we would use <code class="docutils literal notranslate"><span class="pre">print</span></code> instead of <code class="docutils literal notranslate"><span class="pre">return</span></code>!</p>
+<p>To solidify your knowledge about functions in Python, there is another exercise which you can take a look at:</p>
+<div class="warning admonition">
+<p class="admonition-title">Third Python Task:</p>
+<p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/8CrbmncnEpHZi7D">Functions in Python</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="07_datatypes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Types in Python 📊</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="09_flowcontrol.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Flow control ⬇️</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Güren Tan Dinga, Kay Zobel<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

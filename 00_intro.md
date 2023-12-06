@@ -1,5 +1,4 @@
 # Python for Geodesy and Geoinformatics 101
-
 Welcome to PGG101, the preparatory course for Python in Geodesy and Geoinformatics at HCU!
 
 ## PGG 101
