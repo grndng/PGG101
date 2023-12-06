@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loops in Python 🔄 &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Flow control ⬇️" href="08_flowcontrol.html" />
+    <link rel="prev" title="Flow control ⬇️" href="09_flowcontrol.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,49 +106,59 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00_intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
@@ -231,7 +240,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/09_loops.md"
+        <a href="_sources/10_loops.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,10 +358,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="loops-in-python">
+  <div class="tex2jax_ignore mathjax_ignore section" id="loops-in-python">
 <h1>Loops in Python 🔄<a class="headerlink" href="#loops-in-python" title="Permalink to this headline">#</a></h1>
 <p>To be even more flexible and especially to automate tasks in Python we use <em>loops</em>. Loops are being used to execute a given code block over and over again. We will talk about <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. Just as almost everything that’s built into Python, loops are started with their corresponding keywords <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code>. Again: the resemblance to the English language makes it easy to understand the concept behind both kinds of loops.</p>
-<section id="while-loop">
+<div class="section" id="while-loop">
 <h2>while loop 🔁<a class="headerlink" href="#while-loop" title="Permalink to this headline">#</a></h2>
 <p>Let’s talk about the <code class="docutils literal notranslate"><span class="pre">while</span></code>-loop first and start off with an example. Before reading on try to figure out what the following code block does:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
@@ -413,8 +422,8 @@ title="Print to PDF"
 </div>
 <p>The program asks you for “username” (and not <em>your</em> username). If you enter <em>username</em>, the program will go on, otherwise it will jump back to the start right until you’ve entered <em>username</em>. We will talk about <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops more in detail over the course of <em>Software and Interface Technology</em>!</p>
 <p>Aside from <code class="docutils literal notranslate"><span class="pre">while</span></code> loops we can (and do) use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in Python. Before jumping right into the <code class="docutils literal notranslate"><span class="pre">for</span></code> loops, we will have to talk about the <code class="docutils literal notranslate"><span class="pre">range()</span></code>-function in Python for a second.</p>
-</section>
-<section id="the-range-function">
+</div>
+<div class="section" id="the-range-function">
 <h2>the range() function 🔢<a class="headerlink" href="#the-range-function" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">range()</span></code>-function <em>returns</em> a range object. A range object is a data type in Python which is comparable to a <em>sequence</em>. The syntax is pretty straight forward: <code class="docutils literal notranslate"><span class="pre">range(start,stop,step)</span></code> with start being the point where we start and stop where our sequence will stop. While our start-value is optional (the default value is 0), the stop-value is mandatory (since Python needs to know when to stop our sequence). The step size is also optional and determines the increment from one value to the next (we’ll see what that means in a second). Let’s look at some examples:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>print(type(range(0,10,2)))
@@ -422,8 +431,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>As you can see the type of the expression <code class="docutils literal notranslate"><span class="pre">range(0,10,2)</span></code> is <code class="docutils literal notranslate"><span class="pre">range</span></code>. Generally speaking this is as much as you need to know about the <code class="docutils literal notranslate"><span class="pre">range()</span></code>-function <em>for now</em>! Let’s jump over to <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
-</section>
-<section id="for-loops">
+</div>
+<div class="section" id="for-loops">
 <h2>for loops 🔂<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
 <p>While the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop continues to loop over itself while the condition in the loop clause evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop will run e.g. a certain number of times. To do that you need the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop itself and the <code class="docutils literal notranslate"><span class="pre">range()</span></code>-function which is why we introduced it concisely. In truth you don’t necessarily need the <code class="docutils literal notranslate"><span class="pre">range()</span></code>-function, you can loop over everything that is a <em>sequence</em> in Python. For example <code class="docutils literal notranslate"><span class="pre">str</span></code>ings:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;test&quot;</span><span class="p">:</span>
@@ -500,8 +509,8 @@ title="Print to PDF"
 <p class="admonition-title">Final Python Task:</p>
 <p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/M7YNZLZTQJQLWA3">Final Exercise 🎉</a></p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -530,7 +539,7 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="08_flowcontrol.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="09_flowcontrol.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>

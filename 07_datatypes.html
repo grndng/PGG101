@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Types in Python 📊 &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Functions ☄️" href="functions.html" />
-    <link rel="prev" title="Variables and operators 🗃️" href="variables.html" />
+    <link rel="next" title="Functions ☄️" href="08_functions.html" />
+    <link rel="prev" title="Variables and operators 🗃️" href="06_variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,34 +107,44 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
@@ -145,18 +154,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="loops.html">
-   Loops in Python 🔃
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
   </a>
  </li>
 </ul>
@@ -232,7 +241,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/datatypes.md"
+        <a href="_sources/07_datatypes.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -269,12 +278,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looking-at-some-data-types">
+   Looking at some data types 🧾
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types-and-operators">
+   Data Types and operators 🔤❎
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -286,6 +324,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looking-at-some-data-types">
+   Looking at some data types 🧾
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types-and-operators">
+   Data Types and operators 🔤❎
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -293,11 +349,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-types-in-python">
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-types-in-python">
 <h1>Data Types in Python 📊<a class="headerlink" href="#data-types-in-python" title="Permalink to this headline">#</a></h1>
 <p>Before utilizing more of Pythons potential and write more elaborate and extensive programs we will briefly learn about Pythons built-in Data Types. Or at least some of them. When working with our formulas we worked with numerical data. However, when we printed out “Hello world”, that obviously was <em>not</em> numerical which brings us to data types. This section will be incomplete but you will be introduced to the most important and most used ones.</p>
+<div class="section" id="looking-at-some-data-types">
+<h2>Looking at some data types 🧾<a class="headerlink" href="#looking-at-some-data-types" title="Permalink to this headline">#</a></h2>
 <p>Let’s start off with our “Hello world”-statement. That’s text obviously and Python uses <code class="docutils literal notranslate"><span class="pre">str</span></code> for textual data which stands for <code class="docutils literal notranslate"><span class="pre">string</span></code>. We worked with numeric types which are divided into <code class="docutils literal notranslate"><span class="pre">int</span></code> for <code class="docutils literal notranslate"><span class="pre">integer</span></code> values and <code class="docutils literal notranslate"><span class="pre">float</span></code> for floating point numbers. Then there are three types of sequences: <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code> and <code class="docutils literal notranslate"><span class="pre">range</span></code>. Other important data types are <code class="docutils literal notranslate"><span class="pre">dict</span></code>ionaries, <code class="docutils literal notranslate"><span class="pre">set</span></code>s and <code class="docutils literal notranslate"><span class="pre">bool</span></code>eans. We are also offered binary types like <code class="docutils literal notranslate"><span class="pre">bytes</span></code> or <code class="docutils literal notranslate"><span class="pre">bytearray</span></code>s.</p>
-<p>A general overview is great and for a full list of Built-in Data Types in Python you can always take a look in the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">documentation</a> which is (one of) the most important resources when looking up Python-related things. You don’t have to remember all of them and also we can use a function called <code class="docutils literal notranslate"><span class="pre">type()</span></code> to find out the data type of expressions in Python:</p>
+<p>A general overview is great and for a full list of Built-in Data Types in Python you can always take a look in the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">documentation</a> which is one of the most important resources when looking up Python-related things. You don’t have to remember all of them and also we can use a function called <code class="docutils literal notranslate"><span class="pre">type()</span></code> to find out the data type of expressions in Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
 <span class="c1"># we put the element of which we want to</span>
 <span class="c1"># know the type inside the parantheses like:</span>
@@ -305,12 +363,23 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Printing the expression <code class="docutils literal notranslate"><span class="pre">type(a)</span></code> will tell us that <code class="docutils literal notranslate"><span class="pre">a</span></code> is an object of the class <code class="docutils literal notranslate"><span class="pre">str</span></code>. You don’t need to know about objects and classes yet, it’s enough that we know that we can find out the data types of elements with the help of the <code class="docutils literal notranslate"><span class="pre">type()</span></code>-function. Try finding out the types of other data as well!</p>
-<p>What we have learned so far:</p>
+<p>Another way of finding out the type of data is by using <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code>. While <code class="docutils literal notranslate"><span class="pre">type()</span></code> will return the type of the data we are looking at, <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> will return <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> depending on the truthiness of our query:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+<span class="c1"># This would return False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span>
+<span class="c1"># This would return True</span>
+</pre></div>
+</div>
+<p><strong>What we have learned so far:</strong></p>
 <ol class="simple">
 <li><p>Python supports a list of built-in operators (see Table 1)</p></li>
 <li><p>Python has Built-in Data Types (see Table 2)</p></li>
 <li><p>We can utilize the built in operators to work with objects of the built in data types</p></li>
 </ol>
+</div>
+<div class="section" id="data-types-and-operators">
+<h2>Data Types and operators 🔤❎<a class="headerlink" href="#data-types-and-operators" title="Permalink to this headline">#</a></h2>
 <p>Let’s take a deeper look at our data types. We already know how to work with numbers since we’ve tried that out in the interactive shell. Next we want to look at how operators behave in different context. In this case “different context” means as much as “what is left and right of the operator we’re using?”. When we use our addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code> we expect it to add one value to another value. However, if we use the <code class="docutils literal notranslate"><span class="pre">+</span></code> symbol inbetween strings, it will join those. It will become more clear when we take a look:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Let&#39;</span> <span class="o">+</span> <span class="s1">&#39;us&#39;</span> <span class="o">+</span> <span class="s1">&#39;join&#39;</span> <span class="o">+</span> <span class="s1">&#39;some&#39;</span> <span class="o">+</span> <span class="s1">&#39;strings&#39;</span><span class="p">)</span>
 <span class="o">&gt;</span> <span class="s1">&#39;Letusjoinsomestrings&#39;</span>
@@ -339,7 +408,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>As you can see we’ve got ourselves another <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. Again: working with error messages is crucial for developing programs so make sure you try to understand the error messages and why they occur. In this case Python tells us that we can not multiply a sequence (a <code class="docutils literal notranslate"><span class="pre">str</span></code> is a <code class="docutils literal notranslate"><span class="pre">sequence</span></code>, we will learn about <code class="docutils literal notranslate"><span class="pre">sequences</span></code> more in depth later on) by non-int objects (our <code class="docutils literal notranslate"><span class="pre">float</span></code>-value of <code class="docutils literal notranslate"><span class="pre">5.0</span></code> being a non-int object).</p>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -368,14 +438,14 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="06_variables.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Variables and operators 🗃️</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="functions.html" title="next page">
+    <a class='right-next' id="next-link" href="08_functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Functions ☄️</p>

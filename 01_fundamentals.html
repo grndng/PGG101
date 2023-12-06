@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concepts in Programming Languages &#8212; PGG101</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Starting Off 🌟" href="02_startingoff.html" />
+    <link rel="prev" title="Python for Geodesy and Geoinformatics 101" href="00_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PGG101</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Software Technology
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
+   Starting Off 🌟
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_whypython.html">
+   Why Python? 🐍
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_gettingstarted.html">
+   Getting started: Python! ⏯️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_firstprogram.html">
+   Our first Python program 🥇
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_variables.html">
+   Variables and operators 🗃️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_datatypes.html">
+   Data Types in Python 📊
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_functions.html">
+   Functions ☄️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_flowcontrol.html">
+   Flow control ⬇️
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/01_fundamentals.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computers">
+   Computers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-motherboard">
+     The Motherboard
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-central-processing-unit-cpu">
+     The Central Processing Unit (CPU)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#von-neumann-architecture">
+       Von Neumann architecture
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#harvard-architecture">
+       Harvard Architecture
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modern-cpus">
+       Modern CPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ram-permanent-storage-and-the-cloud">
+     RAM, Permanent Storage and the Cloud
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bits-and-bytes">
+   Bits and Bytes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-many-programming-languages">
+   So many programming languages…
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-are-there-so-many-programming-languages">
+     Why are there so many programming languages?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-proceed">
+     How to proceed?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpreted-and-compiled-programming-languages">
+     Interpreted and compiled programming languages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Concepts in Programming Languages</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computers">
+   Computers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-motherboard">
+     The Motherboard
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-central-processing-unit-cpu">
+     The Central Processing Unit (CPU)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#von-neumann-architecture">
+       Von Neumann architecture
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#harvard-architecture">
+       Harvard Architecture
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#modern-cpus">
+       Modern CPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ram-permanent-storage-and-the-cloud">
+     RAM, Permanent Storage and the Cloud
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bits-and-bytes">
+   Bits and Bytes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-many-programming-languages">
+   So many programming languages…
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-are-there-so-many-programming-languages">
+     Why are there so many programming languages?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-proceed">
+     How to proceed?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpreted-and-compiled-programming-languages">
+     Interpreted and compiled programming languages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="concepts-in-programming-languages">
+<h1>Concepts in Programming Languages<a class="headerlink" href="#concepts-in-programming-languages" title="Permalink to this headline">#</a></h1>
+<p>Since the title of our course is not “How to learn Python basics in the shortest possible time” but “Software and Interface Technology”, the first section of our cookbook is about computers, programming languages and their concepts. By learning about basics of computers and concepts of programming languages, we hope to acquire a better understanding of the content we will learn in the next weeks. Furthermore it makes sense to take a step back and look at programming languages in a wider sense to learn a vocabulary of programming constructs and maybe make it easier to learn new languages by understanding concepts instead of memorize them.</p>
+<div class="section" id="computers">
+<h2>Computers<a class="headerlink" href="#computers" title="Permalink to this headline">#</a></h2>
+<p>Depending on the task, computers can be very fast. At the same time they need very clear instructions to work properly. Electricity flows through a computers processing unit and is controlled by many tiny transistors (<a class="reference external" href="http://visual6502.org/JSSim/">http://visual6502.org/JSSim/</a>). Modern transistors are in the range of nanometers which allows processing units to contain more than a billion of them. Those can have two states: on (meaning 1) or off (meaning 0). So by moving 1s and 0s through the circuits, the computer can store data and execute calculations. Before we jump into processing, let’s take a brief look at what computers today usually consist of.</p>
+<div class="section" id="the-motherboard">
+<h3>The Motherboard<a class="headerlink" href="#the-motherboard" title="Permalink to this headline">#</a></h3>
+<p>The motherboard is sometimes also called mainboard. It is the main circuit board of a computer and its backbone that connects all major components together such as the Central Processing Unit (CPU), memory, other important ports and e.g. the Graphics Processing Unit (GPU).</p>
+</div>
+<div class="section" id="the-central-processing-unit-cpu">
+<h3>The Central Processing Unit (CPU)<a class="headerlink" href="#the-central-processing-unit-cpu" title="Permalink to this headline">#</a></h3>
+<div class="section" id="von-neumann-architecture">
+<h4>Von Neumann architecture<a class="headerlink" href="#von-neumann-architecture" title="Permalink to this headline">#</a></h4>
+<p>John von Neumann, in 1945, has described a computer architecture with a few digital components. The components consist of</p>
+<ul class="simple">
+<li><p>a Arithmentic and Logic Unit (ALU)</p></li>
+<li><p>a Control Unit (CU)</p></li>
+<li><p>Memory to store data and instructions and</p></li>
+<li><p>Input and output mechanisms.</p></li>
+</ul>
+<p>In the Von Neumann Architecture, the main memory stores instructions (program) that are to be executed as well as data as binary values next to each other. The processing unit is composed of the ALU and the CU in the Von Neumann Architecture. Instructions are executed sequentially and separately over the Address Bus (connection that looks at a specific location for the program) and the Data Bus (connection that transfers data from and to the memory) which means that one instruction at a time is being fetched from memory and passed to the CPU. This means that not only the capabilities of your CPU is important but also the speed of the connection between your CPU and memory. In the Von Neumann Architecture you can’t access instructions and data at the same time which leads to two transfer cycles to get instructions and data. This is called the “Von Neumann Bottleneck”.</p>
+<p><img alt="Von Neumann Architecture" src="_images/VonNeumann.png" /></p>
+<br>
+<br>
+<hr>
+</div>
+<div class="section" id="harvard-architecture">
+<h4>Harvard Architecture<a class="headerlink" href="#harvard-architecture" title="Permalink to this headline">#</a></h4>
+<p>The Harvard Architecture consists roughly of the same elements. However, Data Memory and Instruction Memory are separated from each other which allows us to access data and instructions at the same time. Also the memories do not need to be built equal or of equal size.</p>
+<p><img alt="Harvard Architecture" src="_images/Harvard.png" /></p>
+<br>
+<br>
+<hr>
+</div>
+<div class="section" id="modern-cpus">
+<h4>Modern CPUs<a class="headerlink" href="#modern-cpus" title="Permalink to this headline">#</a></h4>
+<p>When looking at a modern central processing unit (CPU) of a computer (basically the circuitry that controls the manipulation of data), we can find</p>
+<ul class="simple">
+<li><p>one or multiple cores containing Arithmetic/Logic Units (ALUs) which are managed by</p></li>
+<li><p>a Control Unit (CU)</p></li>
+<li><p>multiple layers (depending on distance to the ALU) of Cache Memory that stores frequently used instructions and data</p></li>
+</ul>
+<p><img alt="Modern CPU" src="_images/Modern.png" />
+<br>
+<br></p>
+<p>The operation of a modern CPU is controlled by a single control unit that coordinates instructions between multiple cores. Further CPUs contain (multiple) levels of cache memory to temporarily store frequently used instructions and data so it does not have to make requests to the memory all the time. Each core usually has its own cache while there is also a shared cache with more memory but due to its distance to the core, slower speeds. Slower is relative though: due to the data not passing through a bus to and from the memory, it’s still much faster than fetching instructions or data from the memory.</p>
+</div>
+</div>
+<div class="section" id="ram-permanent-storage-and-the-cloud">
+<h3>RAM, Permanent Storage and the Cloud<a class="headerlink" href="#ram-permanent-storage-and-the-cloud" title="Permalink to this headline">#</a></h3>
+<p>Storage and memory both refer to the computers internal storage space. However, memory (e.g. random access memory, RAM) and storage (e.g. a hard disk drive or solid state drive) play different roles in a computer. Storage holds all data, files and instructions needed to run the computer. It is not volatile: data will stay in storage until it is being deleted. Memory on the other hand is temporary. When a computer is being used, it loads necessary data from storage to memory (so from your storage drive to your RAM) and gets rid of it eventually. The RAM is connected to your CPU via a bus that enables quick access to the data. Storage is connected via an interface such as SATA (<a class="reference external" href="https://sata-io.org/">https://sata-io.org/</a>) or NVMe (<a class="reference external" href="https://nvmexpress.org/">https://nvmexpress.org/</a>). “The cloud” is a data storage model in which the data is not stored on your local device but outside of your local network. The physical environment, meaning the hard drives the data is stored on, is typically owned by an external company (such as Microsoft for OneDrive, Apple for iCloud, Google for Drive, Dropbox, …). While cloud storage benefits from the fact that it is accessible from anywhere given an internet connection, it is usually slower since the data has to travel through the network first.</p>
+<p><img alt="Storage Speed" src="_images/speed.png" />
+<br>
+<br></p>
+<hr>
+</div>
+</div>
+<div class="section" id="bits-and-bytes">
+<h2>Bits and Bytes<a class="headerlink" href="#bits-and-bytes" title="Permalink to this headline">#</a></h2>
+<p>We have learned about the transistors and their states (on = 1, off = 0). Bits are represented as zeroes and ones and modern computers use 8 Bits per Byte. Usually they are organized as “Words” of 32 or 64 Bit (or 4 Bytes or 8 Bytes). Bits and Bytes can represent anything such as numbers, text, images, sound, video, … - you get the idea. Anyway, you are not supposed to write programs in 0s and 1s - we will get to writing our own programs soon enough and you will see that we can use almost basic English to write our first program. As for Bits and Bytes: you will learn more about them in Interface Technology!</p>
+</div>
+<div class="section" id="so-many-programming-languages">
+<h2>So many programming languages…<a class="headerlink" href="#so-many-programming-languages" title="Permalink to this headline">#</a></h2>
+<p>There are hundreds of programming languages and numerous visualisations to attempt to show their relationships to each other (such as <a class="reference external" href="https://programminglanguages.info/">ProgrammingLanguages.info</a> or <a class="reference external" href="https://github.com/stereobooster/programming-languages-genealogical-tree">Programming Languages Genealogical Tree</a>). Another nice resource to find out more about the history of computing is the <a class="reference external" href="https://en.wikipedia.org/wiki/History_of_programming_languages">Wikipedia entry about the history of programming languages</a>. You can find more on why we use Python in the next chapters.</p>
+<div class="section" id="why-are-there-so-many-programming-languages">
+<h3>Why are there so many programming languages?<a class="headerlink" href="#why-are-there-so-many-programming-languages" title="Permalink to this headline">#</a></h3>
+<p>Asking why there are so many programming languages is like asking why are there so many tools in a toolbox in a repair shop. Sometimes special purposes require specific tools and from that point of view, programming languages can be considered tools. Also computing has evolved and with that, programming languages did as well. Some companies created their own languages to control all implementation details: Microsoft and C#, Apple with Swift, Mozilla with Rust and so on. Outside of evolving hardware, sometimes programming languages evolve due to new approaches to problems in academia and the industry.</p>
+</div>
+<div class="section" id="how-to-proceed">
+<h3>How to proceed?<a class="headerlink" href="#how-to-proceed" title="Permalink to this headline">#</a></h3>
+<p>Depending on the point of view, some programming languages might make more sense to learn than others. At HCU we have decided to teach Python which is considered a “general purpose language”. However, during your time here you will have contact with SQL, a declarative query language which is useful when working with databases. A popular programming language used as one of the main ingredients for websites is JavaScript (JS). Lots of Python libraries are accessing JavaScript code to e.g. visualize data so when fine tuning your (geo)plots, it might make sense to have a rough understanding of JavaScript.</p>
+</div>
+<div class="section" id="interpreted-and-compiled-programming-languages">
+<h3>Interpreted and compiled programming languages<a class="headerlink" href="#interpreted-and-compiled-programming-languages" title="Permalink to this headline">#</a></h3>
+<p>Before we proceed to take a look at Python: We don’t want to dive into the specifics of each programming language and what they excel at but there is one important differentiation we want to look at. There are <em>interpreted</em> and <em>compiled</em> programming languages.</p>
+<p><em>Interpreted</em> programming languages do not require compilation, they are translated into machine code when being executed. Python, alongside JavaScript, PHP and BASIC are <em>interpreted</em> programming languages. The downside of <em>interpreted</em> programming languages is that they are converted to machine code each time they are executed which takes time to process.</p>
+<p><em>Compiled</em> languages require a compilation prior to running, the compiled programs usually only run on one specific architecture (Windows, Linux, macOS, 32/64 Bit) but they are much faster (since they do not have to be converted to machine code each time they are executed). C, C++ and Fortran are examples for <em>compiled</em> programming languages.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h2>
+<p>For further information on the topics discussed in this chapter, feel free to take a look at the following sources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://visual6502.org/JSSim/">http://visual6502.org/JSSim/</a></p></li>
+<li><p><a class="reference external" href="https://programminglanguages.info/">https://programminglanguages.info/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/stereobooster/programming-languages-genealogical-tree">https://github.com/stereobooster/programming-languages-genealogical-tree</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/History_of_programming_languages">https://en.wikipedia.org/wiki/History_of_programming_languages</a></p></li>
+<li><p>Programming from the Ground Up by Jonathan Bartlett, ISBN 0975283847 (<a class="reference external" href="https://www.researchgate.net/publication/265580654_Programming_from_the_Ground_Up">https://www.researchgate.net/publication/265580654_Programming_from_the_Ground_Up</a>)</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Python for Geodesy and Geoinformatics 101</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02_startingoff.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Starting Off 🌟</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Güren Tan Dinga, Kay Zobel<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

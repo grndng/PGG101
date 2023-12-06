@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python for Geodesy and Geoinformatics 101 &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,7 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Starting Off 🌟" href="01_startingoff.html" />
+    <link rel="next" title="Concepts in Programming Languages" href="01_fundamentals.html" />
+    <link rel="prev" title="Software Technology" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,55 +106,65 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
-                    Python for Geodesy and Geoinformatics 101
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_loops.html">
+  <a class="reference internal" href="10_loops.html">
    Loops in Python 🔄
   </a>
  </li>
@@ -349,32 +359,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="python-for-geodesy-and-geoinformatics-101">
+  <div class="tex2jax_ignore mathjax_ignore section" id="python-for-geodesy-and-geoinformatics-101">
 <h1>Python for Geodesy and Geoinformatics 101<a class="headerlink" href="#python-for-geodesy-and-geoinformatics-101" title="Permalink to this headline">#</a></h1>
 <p>Welcome to PGG101, the preparatory course for Python in Geodesy and Geoinformatics at HCU!</p>
-<section id="pgg-101">
+<div class="section" id="pgg-101">
 <h2>PGG 101<a class="headerlink" href="#pgg-101" title="Permalink to this headline">#</a></h2>
 <p>Python for Geodesy and Geoinformatics 101 is a preparatory course for the programming language Python which is being used in the bachelor’s and master’s program Geodesy and Geoinformatics at HafenCity University. Especially if you don’t have any prior knowledge of Python or other programming languages, you should work through the preparatory course carefully. The course is designed so that you can learn the basics of Python in a concise manner. It is by no means complete or a full introduction into programming or Python and meant as preparation for the master’s program at HafenCity University.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have questions regarding the organisation of this course, the course material or have any feedback, let us know via <a class="reference external" href="mailto:gueren&#46;dinga&#37;&#52;&#48;hcu-hamburg&#46;de">mail</a>.</p>
 </div>
-</section>
-<section id="before-we-start-what-this-course-is-not">
+</div>
+<div class="section" id="before-we-start-what-this-course-is-not">
 <h2>Before we start: what this course is not<a class="headerlink" href="#before-we-start-what-this-course-is-not" title="Permalink to this headline">#</a></h2>
 <p>This course is not meant to be a complete guide on all the things you can do with Python. The different sections describe roughly what to expect from each chapter. We try to be as beginner friendly as possible so in case you already have some experience in Python or if you have experience in another programming language, you might want to skip sections. In case you’re coming from another programming language, you might check out resources on moving from e.g. Java to Python. We expect you, and we will keep expecting you, to look for resources independently as well since programming takes training and time to learn properly and sustainably. In case you have specific questions or need further input on Python, also feel free to ask your instructors outside of Software and Interface Technology as well!</p>
-</section>
-<section id="how-to-navigate">
+</div>
+<div class="section" id="how-to-navigate">
 <h2>How to navigate?<a class="headerlink" href="#how-to-navigate" title="Permalink to this headline">#</a></h2>
 <p>The PGG101-website is mainly split into three parts. On the left side you can see the table of contents (toc) of the entire “book”. There you can see, for example, “Python for Geodesy and Geoinformatics 101” which is the chapter you are currently reading. Right in the middle you simply find the content which is what you are currently reading. On the right side you see another table of contents, which, contrary to the toc on the left side, shows the subscetions (or “subchapters”) of the chapter you are currently reading.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are done reading this chapter, you can click “Next” at the bottom right side to proceed to the next chapter!</p>
 </div>
-</section>
-<div class="toctree-wrapper compound">
 </div>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -403,10 +411,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="01_startingoff.html" title="next page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Software Technology</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="01_fundamentals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Starting Off 🌟</p>
+        <p class="prev-next-title">Concepts in Programming Languages</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flow control ⬇️ &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Loops in Python 🔄" href="09_loops.html" />
-    <link rel="prev" title="Functions ☄️" href="07_functions.html" />
+    <link rel="next" title="Loops in Python 🔄" href="10_loops.html" />
+    <link rel="prev" title="Functions ☄️" href="08_functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,44 +107,54 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00_intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
@@ -155,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_loops.html">
+  <a class="reference internal" href="10_loops.html">
    Loops in Python 🔄
   </a>
  </li>
@@ -232,7 +241,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/08_flowcontrol.md"
+        <a href="_sources/09_flowcontrol.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -340,11 +349,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="flow-control">
+  <div class="tex2jax_ignore mathjax_ignore section" id="flow-control">
 <h1>Flow control ⬇️<a class="headerlink" href="#flow-control" title="Permalink to this headline">#</a></h1>
 <p>By now it might be apparent that Python reads through the program you provide from top to bottom and executes the commands on its way down. Now when we think about automation, that’s not necessarily what we have in mind since we want more flexibility. Functions are one way to be more flexible and accurate since we can call code blocks from certain positions in our code. However, in some cases you want to repeat an instruction a certain number of times or you want to decide on which code block to run based on a condition. A classic way to explain flow control is by the example of some person that wants to go outside. The question is “is it raining?” and if so, if we have an umbrella. Based on that we decide if we want to go outside or if we wait a while until it’s not raining anymore. You can draw a <em>flow chart</em> with that information which is provided by Al Sweigart in <a class="reference external" href="https://automatetheboringstuff.com/2e/chapter2/">Automate the Boring Stuff with Python</a> which has a free online version and is absolutely worth a read.</p>
 <p>So if you start at the top left and you want to get to the end you have to answer different questions with <code class="docutils literal notranslate"><span class="pre">True</span></code> (yes) or <code class="docutils literal notranslate"><span class="pre">False</span></code> (no). For us this is rather intuitive and self explanatory: if you don’t want to get wet get an umbrella or wait until it stops raining. As for the computer, we need to tell it exactly what to do if either of those conditions apply. At the end of this chapter we will be able to write out the “is it raining”-example in Python!</p>
-<section id="the-input-function-in-python">
+<div class="section" id="the-input-function-in-python">
 <h2>The input function in Python ⏺<a class="headerlink" href="#the-input-function-in-python" title="Permalink to this headline">#</a></h2>
 <p>Before we get to the condition-statements, let’s learn about the <code class="docutils literal notranslate"><span class="pre">input()</span></code>-function in Python. So if we want the user to enter something in our program, we need to use the <code class="docutils literal notranslate"><span class="pre">input()</span></code>-function. As you can see the function looks exactly like the ones we have written. It has a name followed by parenthesis. A quick example will explain how the <code class="docutils literal notranslate"><span class="pre">input()</span></code>-function works:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter something: &quot;</span><span class="p">)</span>
@@ -368,8 +377,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>What use cases for the <code class="docutils literal notranslate"><span class="pre">input()</span></code>-function can you think of?</p>
-</section>
-<section id="flow-control-statements">
+</div>
+<div class="section" id="flow-control-statements">
 <h2>Flow control statements 🔃<a class="headerlink" href="#flow-control-statements" title="Permalink to this headline">#</a></h2>
 <p>One reason that Python is so popular is that it’s supposed to be easy to learn. The resemblance of the syntax to the English language is therefore no coincidence. So if we want to ask if something is whether <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> in Python we use the <code class="docutils literal notranslate"><span class="pre">if</span></code>-statement:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">5</span>
@@ -443,8 +452,8 @@ title="Print to PDF"
 <p class="admonition-title">Fourth Python Task:</p>
 <p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/YAP8z8fyYFNGyeM">Flow Control in Python</a></p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -473,14 +482,14 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="07_functions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="08_functions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Functions ☄️</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="09_loops.html" title="next page">
+    <a class='right-next' id="next-link" href="10_loops.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Loops in Python 🔄</p>

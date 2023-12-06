@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variables and operators 🗃️ &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Types in Python 📊" href="06_datatypes.html" />
-    <link rel="prev" title="Our first Python program 🥇" href="04_firstprogram.html" />
+    <link rel="next" title="Data Types in Python 📊" href="07_datatypes.html" />
+    <link rel="prev" title="Our first Python program 🥇" href="05_firstprogram.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,29 +107,39 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00_intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
@@ -140,23 +149,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_loops.html">
-   Loops in Python 🔃
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
   </a>
  </li>
 </ul>
@@ -232,7 +241,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/05_variables.md"
+        <a href="_sources/06_variables.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -374,10 +383,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="variables-and-operators">
+  <div class="tex2jax_ignore mathjax_ignore section" id="variables-and-operators">
 <h1>Variables and operators 🗃️<a class="headerlink" href="#variables-and-operators" title="Permalink to this headline">#</a></h1>
 <p>As you can guess from the title of this chapter we will learn more about variables and operators in Python. We already talked about variables and what you should keep in mind about variables is that they are comparable to a container or box where we can store values so our program can work with it.</p>
-<section id="variables">
+<div class="section" id="variables">
 <h2>Variables 🅰<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
 <p>When naming variables there are some things to keep in mind. Variable names have to start with an underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> or a letter and can be as long as you wish. So a variable name could be <code class="docutils literal notranslate"><span class="pre">_42</span></code> but not <code class="docutils literal notranslate"><span class="pre">42</span></code> since <code class="docutils literal notranslate"><span class="pre">42</span></code> doesn’t start with an underscore or a letter. For the students having keyboards set to a language that is not English: we recommend you not to use special characters like <code class="docutils literal notranslate"><span class="pre">ü</span></code>, <code class="docutils literal notranslate"><span class="pre">ä</span></code>, <code class="docutils literal notranslate"><span class="pre">à</span></code> and so on in your variable names. Also in Python there are <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">keywords</a> that are <em>reserved</em> for Python-internal functions. Those can’t be used as variables and shouldn’t be used as e.g. file names when saving your Python files:</p>
 <blockquote>
@@ -392,10 +401,10 @@ title="Print to PDF"
 </div>
 </div></blockquote>
 <p>Try to keep variable names descriptive for example <code class="docutils literal notranslate"><span class="pre">list_of_measurements</span></code> for, you’ve guessed it, a list of measurements. The Python Style Guide (<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>) recommends using a notation called <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> which divides words in variables by <code class="docutils literal notranslate"><span class="pre">_</span></code>. Another way to write variable names would be <code class="docutils literal notranslate"><span class="pre">camelCase</span></code> or <code class="docutils literal notranslate"><span class="pre">MixedCase</span></code> where you write the first letter of each word in upper-case letters. Generally speaking: whichever you use, stick to it within your Python file.</p>
-</section>
-<section id="operators">
+</div>
+<div class="section" id="operators">
 <h2>Operators ↔<a class="headerlink" href="#operators" title="Permalink to this headline">#</a></h2>
-<section id="arithmetic-operators">
+<div class="section" id="arithmetic-operators">
 <h3>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">#</a></h3>
 <p>We already have used some operators in our first assignment. We will start with the more intuitive operators: arithmetic operators.</p>
 <table class="colwidths-auto table">
@@ -437,9 +446,9 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Most of those are pretty obvious. You can imagine modulus as the simple remainder of the division of two numbers. <code class="docutils literal notranslate"><span class="pre">23/5</span></code> results in the 5 “fitting” four times inside the 20 and <code class="docutils literal notranslate"><span class="pre">3</span></code>remains which means <code class="docutils literal notranslate"><span class="pre">23</span> <span class="pre">%</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">3</span></code>. With floor division it’s the opposite: you don’t try to figure out what remains after you have divided a number by another number but how many times one number can fit into another number. That means that <code class="docutils literal notranslate"><span class="pre">23</span> <span class="pre">//</span> <span class="pre">5</span></code> would result in 4 since 5 “fits” 4 times in 23.</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="comparison-operators">
+<div class="section" id="comparison-operators">
 <h3>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">#</a></h3>
 <p>Next we will talk about comparison operators. We already know the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>. At first it might feel misleading because we know the assignment operator from mathematics as the operator that shows that something is equal to one another. In Python we use <code class="docutils literal notranslate"><span class="pre">==</span></code> to check for equality. Other comparison operators are:</p>
 <table class="colwidths-auto table">
@@ -477,9 +486,9 @@ title="Print to PDF"
 </tbody>
 </table>
 <p>Other than the notation in Python the comparison operators should be rather intuitive.</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="logical-and-membership-operators">
+<div class="section" id="logical-and-membership-operators">
 <h3>Logical and membership operators<a class="headerlink" href="#logical-and-membership-operators" title="Permalink to this headline">#</a></h3>
 <p>Let us take a look at logical and membership operators. Those are pretty self explanatory and are heavily utilized in programming languages to combine statements. The following examples all evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
 <table class="colwidths-auto table">
@@ -513,9 +522,9 @@ title="Print to PDF"
 <p class="admonition-title">Second Python Task:</p>
 <p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/3RbKAH6zBwgA5Dx">Operators in Python</a></p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -544,14 +553,14 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="04_firstprogram.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="05_firstprogram.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Our first Python program 🥇</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="06_datatypes.html" title="next page">
+    <a class='right-next' id="next-link" href="07_datatypes.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Data Types in Python 📊</p>

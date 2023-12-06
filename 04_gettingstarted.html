@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getting started: Python! ⏯️ &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Our first Python program 🥇" href="04_firstprogram.html" />
-    <link rel="prev" title="Why Python? 🐍" href="02_whypython.html" />
+    <link rel="next" title="Our first Python program 🥇" href="05_firstprogram.html" />
+    <link rel="prev" title="Why Python? 🐍" href="03_whypython.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,19 +107,29 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00_intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
@@ -130,33 +139,33 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_firstprogram.html">
+  <a class="reference internal" href="05_firstprogram.html">
    Our first Python program 🥇
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_loops.html">
-   Loops in Python 🔃
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
   </a>
  </li>
 </ul>
@@ -232,7 +241,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/03_gettingstarted.md"
+        <a href="_sources/04_gettingstarted.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -364,7 +373,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-python">
+  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started-python">
 <h1>Getting started: Python! ⏯️<a class="headerlink" href="#getting-started-python" title="Permalink to this headline">#</a></h1>
 <p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Link to Video on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/sCGdMtXXKjfaYSQ">Installing Python</a></p>
 <p>Python works on a lot of platforms. <em>On Unix-like operating systems, Python most of the time is part of the operating system and installed by default so you don’t need to install anything else.</em> On Windows installing Python is as easy as installing any other software package. During the installation you will be asked if you want to add Python to your <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH</a> which is a good idea (so you can use Python via the command line interface).</p>
@@ -378,18 +387,18 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Consider the first step done! The next step would be to chose and install an integrated development environment or IDE. An IDE is software that provides developers with all tools needed to simplify workflows and have all important components for developing software at one place. Some IDEs look very similar to each other, some are rather specific to programming languages and some you can customize and configure yourself. If you have written Python code before and if you are familiar with an IDE of your choice we usually recommend you to use that. To have a common denominator, we will introduce you to Visual Studio Code or VS Code which is open source, free and supports many programming languages as well as extensions which might come in handy at a later point in your masters program! To offer an alternative with a “different but same” interface which is used in science quite often, we also show you how to install Spyder which might come in handy in the following semesters. The most important thing is that you are able to produce python files which works with either of those!</p>
-<section id="visual-studio-code">
+<div class="section" id="visual-studio-code">
 <h2>Visual Studio Code 💻<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">#</a></h2>
 <p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Link to Video on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/a4DaBFnRgq7KSZ5">Setting up VSCode</a></p>
 <p>You can download Visual Studio Code for macOS, Linux and Windows at <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. Another advantage of Visual Studio Code is the documentation which you can take a look at <a class="reference external" href="https://code.visualstudio.com/docs/">https://code.visualstudio.com/docs/</a>.</p>
 <p>Since we already have installed Python on our system, setting up VS Code to understand that we want to write programs in Python is quite easy. To do so we start VS Code and on the left side we click on the extensions button (the one looking like a puzzle, check out the video in case you don’t know what to do) and search for “Python”. There is an extension called “Python” which is provided by Microsoft. Click on “Install” to set up Python support in VS Code. After the installation is done, you can create a new file with “File” -&gt; “New file”. When creating a new file, VS Code will ask you to set up a programming language. In our case, who would’ve guessed it, we set up Python as our programming language. Well done!</p>
-</section>
-<section id="spyder">
+</div>
+<div class="section" id="spyder">
 <h2>Spyder 🕷️<a class="headerlink" href="#spyder" title="Permalink to this headline">#</a></h2>
 <p><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Link to Video on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/KBFekmtsCTJNrFY">Installing Spyder</a></p>
 <p>You can download Spyder for macOS, Linux and Windows at <a class="reference external" href="https://www.spyder-ide.org/">https://www.spyder-ide.org/</a>. You can also find Spyder on GitHub at <a class="reference external" href="https://github.com/spyder-ide/spyder">https://github.com/spyder-ide/spyder</a>! Getting started with Spyder is very easy. Spyder is fully written in Python and comes with it’s own Python version. It’s more straight forward than VS Code, both IDEs have their up- and downsides so you’re free to chose whatever you work with.</p>
-</section>
-<section id="what-can-we-do-with-python">
+</div>
+<div class="section" id="what-can-we-do-with-python">
 <h2>What can we do with Python? 🚀<a class="headerlink" href="#what-can-we-do-with-python" title="Permalink to this headline">#</a></h2>
 <p>We do not learn Python for the sake of learning Python. After learning the fundamentals of a programming language, many people ask themselves what to do next. One of Pythons strengths is the wide variety of things you can do with it. <a class="reference external" href="https://realpython.com/what-can-i-do-with-python/?utm_source=notification_summary&amp;utm_medium=email&amp;utm_campaign=2021-07-13">RealPythons “What can I do with Python” page</a> sums up what you can do with Python in a great way. Some hand picked examples of what you can do with Python might be:</p>
 <ul class="simple">
@@ -400,42 +409,42 @@ title="Print to PDF"
 <li><p>Working on geolocation with <a class="reference external" href="https://github.com/jazzband/geojson">geojson</a> or <a class="reference external" href="https://github.com/geopy/geopy">geopy</a> as well as working with shape files with <a class="reference external" href="https://github.com/Toblerity/Shapely">shapely</a> or <a class="reference external" href="https://pypi.org/project/rasterio/">RasterIO</a></p></li>
 <li><p>You can even control robots with Python and <a class="reference external" href="https://wiki.ros.org/rospy">rospy</a>!</p></li>
 </ul>
-<section id="example-projects">
+<div class="section" id="example-projects">
 <h3>Example projects ⚙<a class="headerlink" href="#example-projects" title="Permalink to this headline">#</a></h3>
 <p>Here are a few advanced projects with Python as a heads up. Don’t worry too much about how the results have been accomplished but rather at what you can do with Python. This is a very small excerpt of what you can do with Python - we will look at lots of projects during the semester.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f0d3bbe8-6c2d-4162-80f8-2df0ac3ccfed" name="13fbbbb3-e6a5-4555-9bc0-495a89a002dc" type="radio">
-</input><label class="sd-tab-label" for="f0d3bbe8-6c2d-4162-80f8-2df0ac3ccfed">
+<input checked="checked" id="c9eeaa1c-1913-4cc7-ada5-9f04768ad233" name="7a9620b0-f94e-4a70-97fd-64c405db4166" type="radio">
+</input><label class="sd-tab-label" for="c9eeaa1c-1913-4cc7-ada5-9f04768ad233">
 Vehicle Detection</label><div class="sd-tab-content docutils">
 <p><strong>Find vehicles in aerial imagery automatically:</strong>
 <a class="reference external" href="https://github.com/yashrane/Dog-Breed-Identification">Link to paper</a></p>
 <p><img alt="Image of Vehicle Instance Segmentation" src="_images/image_segmentation.png" /></p>
 </div>
-<input id="57716e31-a6e3-4004-8b27-c056577a6b47" name="13fbbbb3-e6a5-4555-9bc0-495a89a002dc" type="radio">
-</input><label class="sd-tab-label" for="57716e31-a6e3-4004-8b27-c056577a6b47">
+<input id="50fc4a33-f58b-45ce-84fe-c646401f93cf" name="7a9620b0-f94e-4a70-97fd-64c405db4166" type="radio">
+</input><label class="sd-tab-label" for="50fc4a33-f58b-45ce-84fe-c646401f93cf">
 Web Apps with Dash</label><div class="sd-tab-content docutils">
 <p><strong>Create web applications with plotly and dash:</strong>
 <a class="reference external" href="https://dash.gallery/dash-opioid-epidemic/">Link to Dashboard</a> | <a class="reference external" href="https://dash.gallery/Portal/">Link to Dash App-Gallery</a></p>
 <p><img alt="Image of Example Dashboard" src="_images/webapp_example.png" /></p>
 </div>
-<input id="9a9f11e3-081d-463c-b4db-27a4ef874166" name="13fbbbb3-e6a5-4555-9bc0-495a89a002dc" type="radio">
-</input><label class="sd-tab-label" for="9a9f11e3-081d-463c-b4db-27a4ef874166">
+<input id="9f450238-b439-4480-aba5-9faaa7ad13e0" name="7a9620b0-f94e-4a70-97fd-64c405db4166" type="radio">
+</input><label class="sd-tab-label" for="9f450238-b439-4480-aba5-9faaa7ad13e0">
 Data Analysis</label><div class="sd-tab-content docutils">
 <p><strong>Analyse data and make predictions for the future with scikit:</strong>
 <a class="reference external" href="https://thecleverprogrammer.com/2022/02/01/waiter-tips-prediction-with-machine-learning/">Link to Website</a></p>
 <p><img alt="Image of Plot" src="_images/data_analysis.png" /></p>
 </div>
-<input id="c575088f-c3a2-41e8-bdf0-e7c45509ad55" name="13fbbbb3-e6a5-4555-9bc0-495a89a002dc" type="radio">
-</input><label class="sd-tab-label" for="c575088f-c3a2-41e8-bdf0-e7c45509ad55">
+<input id="c90921f1-6209-4c3f-9b7d-51e80c5aa232" name="7a9620b0-f94e-4a70-97fd-64c405db4166" type="radio">
+</input><label class="sd-tab-label" for="c90921f1-6209-4c3f-9b7d-51e80c5aa232">
 Identify dog breeds</label><div class="sd-tab-content docutils">
 <p><strong>Identify dog breeds automatically with PyTorch:</strong>
 <a class="reference external" href="https://github.com/yashrane/Dog-Breed-Identification">Link to GitHub Repository</a></p>
 <p><img alt="Image of Dog Breed ID" src="_images/dog_breed.png" /></p>
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -464,14 +473,14 @@ Identify dog breeds</label><div class="sd-tab-content docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="02_whypython.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="03_whypython.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Why Python? 🐍</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_firstprogram.html" title="next page">
+    <a class='right-next' id="next-link" href="05_firstprogram.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Our first Python program 🥇</p>

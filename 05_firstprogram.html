@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our first Python program 🥇 &#8212; PGG101</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -52,8 +51,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variables and operators 🗃️" href="05_variables.html" />
-    <link rel="prev" title="Getting started: Python! ⏯️" href="03_gettingstarted.html" />
+    <link rel="next" title="Variables and operators 🗃️" href="06_variables.html" />
+    <link rel="prev" title="Getting started: Python! ⏯️" href="04_gettingstarted.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,24 +107,34 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00_intro.html">
-                    Python for Geodesy and Geoinformatics 101
+                <a class="reference internal" href="index.html">
+                    Software Technology
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_startingoff.html">
+  <a class="reference internal" href="00_intro.html">
+   Python for Geodesy and Geoinformatics 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_fundamentals.html">
+   Concepts in Programming Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_startingoff.html">
    Starting Off 🌟
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_whypython.html">
+  <a class="reference internal" href="03_whypython.html">
    Why Python? 🐍
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_gettingstarted.html">
+  <a class="reference internal" href="04_gettingstarted.html">
    Getting started: Python! ⏯️
   </a>
  </li>
@@ -135,28 +144,28 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05_variables.html">
+  <a class="reference internal" href="06_variables.html">
    Variables and operators 🗃️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_datatypes.html">
+  <a class="reference internal" href="07_datatypes.html">
    Data Types in Python 📊
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_functions.html">
+  <a class="reference internal" href="08_functions.html">
    Functions ☄️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_flowcontrol.html">
+  <a class="reference internal" href="09_flowcontrol.html">
    Flow control ⬇️
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_loops.html">
-   Loops in Python 🔃
+  <a class="reference internal" href="10_loops.html">
+   Loops in Python 🔄
   </a>
  </li>
 </ul>
@@ -232,7 +241,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/04_firstprogram.md"
+        <a href="_sources/05_firstprogram.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -374,10 +383,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="our-first-python-program">
+  <div class="tex2jax_ignore mathjax_ignore section" id="our-first-python-program">
 <h1>Our first Python program 🥇<a class="headerlink" href="#our-first-python-program" title="Permalink to this headline">#</a></h1>
 <p>After setting up Python and VS Code (or Spyder), we are ready to make our first steps in writing programs. When learning new programming languages as well as verifying that the installation process went down as expected, <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> is a popular first program. It simply prints out the words <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>. There are even collections where you can check out the <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code>-examples of different programming languages (e.g. <a class="reference external" href="http://helloworldcollection.de/">Hello World Collection</a>).</p>
-<section id="hello-world">
+<div class="section" id="hello-world">
 <h2>Hello world 👋<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h2>
 <p>To print out any words in Python, and for the sake of staying true to the example, to print out <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> you simply write:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
@@ -385,11 +394,11 @@ title="Print to PDF"
 </div>
 <p>which should return your Python version (e.g. Python 3.9.0 or Python 3.10.6, …).</p>
 <p>In Python, before being able to run a script or a program, you need to save the file first. So our next steps would be to create a Python file, print out <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world</span></code> and see what happens! If something is unclear, you can re-watch the video where we have installed VS Code or Spyder to get an idea on how to create, save and run a file in either program.</p>
-</section>
-<section id="assigments-variables-and-comments">
+</div>
+<div class="section" id="assigments-variables-and-comments">
 <h2>Assigments, variables and comments 👉<a class="headerlink" href="#assigments-variables-and-comments" title="Permalink to this headline">#</a></h2>
 <p>Before proceeding with writing more interesting programs, let’s take a look at three elements of Python (you remember the list we had earlier?) which will help us with programming in Python: variables, assignments and comments.</p>
-<section id="assignments">
+<div class="section" id="assignments">
 <h3>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">#</a></h3>
 <p>Assignments are comparable to assignments in mathematics when you “store” a numerical value in a variable. Taking a look at an assignment in Python we will notice that we’ve seen the form a lot of times in mathematics already:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
@@ -399,12 +408,12 @@ title="Print to PDF"
 </div>
 <p>In Python the expression left of the <em>assignment operator</em> <code class="docutils literal notranslate"><span class="pre">=</span></code> is the variable. So in our case, in the first line <code class="docutils literal notranslate"><span class="pre">a</span></code> is the variable, <code class="docutils literal notranslate"><span class="pre">=</span></code> the assignment operator and <code class="docutils literal notranslate"><span class="pre">3</span></code> the <em>value</em>. It’s a rather intuitive concept and you will surely get used to it in no time!</p>
 <p>When talking about variables and values, it’s important to keep in mind that in the first line <code class="docutils literal notranslate"><span class="pre">3</span></code> is <em>assigned to</em> <code class="docutils literal notranslate"><span class="pre">a</span></code> and not <code class="docutils literal notranslate"><span class="pre">3</span></code> <em>is</em> <code class="docutils literal notranslate"><span class="pre">a</span></code>. In line 3 we assign <code class="docutils literal notranslate"><span class="pre">b</span></code> to <code class="docutils literal notranslate"><span class="pre">a</span></code> which means that <code class="docutils literal notranslate"><span class="pre">a</span></code> apparently is not <code class="docutils literal notranslate"><span class="pre">3</span></code> but <code class="docutils literal notranslate"><span class="pre">3</span></code> is the value assigned to <code class="docutils literal notranslate"><span class="pre">a</span></code> which can change over the course of our program.</p>
-</section>
-<section id="operators-in-short">
+</div>
+<div class="section" id="operators-in-short">
 <h3>Operators in short<a class="headerlink" href="#operators-in-short" title="Permalink to this headline">#</a></h3>
 <p>Before jumping to comments, just because we’ve used one, let’s quickly talk about operators which we will talk about more in depth at a later point. So <code class="docutils literal notranslate"><span class="pre">=</span></code> apparently is the <em>assignment operator</em>. There are more operators in Python. Imagine an operator as a function inherent to Python. When Python <em>parses</em> or reads through our code when we run our program and it notices one of the built in operators, it <em>does</em> something. When Python encounters a <code class="docutils literal notranslate"><span class="pre">=</span></code> it knows that it has to assign a value to a variable. If Python encounters a <code class="docutils literal notranslate"><span class="pre">+</span></code> it knows it has to add things, <code class="docutils literal notranslate"><span class="pre">*</span></code>  is multiplication and so on. Again, there will be a more elaborate take on operators and variables!</p>
-</section>
-<section id="comments">
+</div>
+<div class="section" id="comments">
 <h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h3>
 <p>The other concept we should talk about are comments. Imagine a cookbook. You look through the different recipes and try some of them. While doing so, you find out that using a little less flour and a little more milk lead to nicer cookies so you write that down next to the recipe. You made a comment. Just like that you have the possibility to write comments in your code. You will eventually get to a point where you write code and don’t touch it for a while and then go back to the code. The first question when scrolling through the code will probably be <em>“well, what did I write?”</em>. You naturally remember some things and some you don’t. To avoid that, you <u>write comments for yourself</u>: it’s easier (and more efficient) to take your time to write comments while writing your code instead of trying to find out what your functions do at a later point in time. It also makes a lot of sense to <u>comment your code for others</u>, especially if you know that you will share your code or work on a project with other developers so they don’t have to figure out what has been written on their own. So how do comments work in <em>Python</em>? When writing comments we can use the hash-mark <code class="docutils literal notranslate"><span class="pre">#</span></code> and everything after the <code class="docutils literal notranslate"><span class="pre">#</span></code> in that line won’t run:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Python 101!&quot;</span><span class="p">)</span> <span class="c1"># this is a comment</span>
@@ -432,9 +441,9 @@ title="Print to PDF"
 <p class="admonition-title">First Python Task:</p>
 <p><span class="sd-sphinx-override sd-badge sd-bg-danger sd-bg-text-danger">Link to PDF on HCU Cloud:</span> <a class="reference external" href="https://cloud.hcu-hamburg.de/nextcloud/s/wg5WerxgmFq59CM">First Python Program</a></p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -463,14 +472,14 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="03_gettingstarted.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="04_gettingstarted.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Getting started: Python! ⏯️</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="05_variables.html" title="next page">
+    <a class='right-next' id="next-link" href="06_variables.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Variables and operators 🗃️</p>
